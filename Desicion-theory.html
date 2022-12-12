@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Theory</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css"> 
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="shortcut icon" href="img/5721988f-e218-42de-adb6-4c64656d4dfc.jpg" type="image/x-icon">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <h1 class="title text-center my-4 text-info shadow-lg p-3 mb-5  rounded">Decision Theory Solver</h1>
+      </div> 
+    </div>
+  <div class="container mt-3">
+
+    <div class="row ">
+    <div class="mt-5 col-6">
+      <table >
+     <tr>
+    <td> <p > Enter <small>NO.</small> of Alternative </p> </td>
+    <td> <input class="form-control bg-transparent text-white" id="row" type="number" placeholder="Enter NO of Alternative "></td>
+    </tr>
+    <tr>
+    <td> <p > Enter <small>NO.</small> of Nature</p></td>
+    <td> <input class="form-control bg-transparent text-white" placeholder="Enter NO of Nature" id="column"  type="number"></td>
+    </tr>
+    <tr>
+    <td> <button type="button" class="btn btn-outline-info mt-3" onclick=writeNumber() >Create Table</button> </td>
+    </tr>
+
+  </table>
+    </div>
+     <div class="col-6 d-none mt-5 " id="Alt_factor">
+      <table>
+        <tr>
+          <td> <p> Enter the Alternative </p> </td>
+          <td> <input class="form-control bg-transparent text-white" placeholder="Enter the Alternative" id="add_Alternative" type="text"></td> 
+          <td>    <button type="button" class="btn btn-outline-info " onclick=add_Alternative()> ENTER</button>          </td>    
+  </tr>
+    
+    <tr>
+      <td> <p class="m-0"> Enter the Nature </p></td>
+      <td><input class="form-control bg-transparent text-white" placeholder="Enter the Nature"  id="addFactor"  type="text"> </td>
+      <td><button type="button" class="btn btn-outline-info " onclick=add_Factor()> ENTER</button></td>
+  </tr>
+  <tr>
+    <td> <p class="mt-2"> Enter the Alpha </p></td>
+    <td><input class="form-control bg-transparent text-white" placeholder="Enter the Alpha"  id="Alpha"  type="number"> </td></td>
+    <td><button type="button" class="btn btn-outline-info" onclick=get_alpha()> ENTER</button></td>
+  </tr>
+  </table>
+  </div>
+  <div class="group mt-4">
+    <table  class="table mt-5 table-bordered table-hover table-striped "  id="table">
+
+    </table>
+    </div>
+  </div>
+ 
+
+  <div class="container  row"> 
+    <div class=" col-3 mt-5">
+      <button type="button" class="btn btn-outline-info  " onclick=get_Maximax()> get Maximax </button>
+      <p class="avg form-control bg-transparent text-white  mt-3  " id="maxmax" ></p> 
+    </div>
+   
+  
+    <div class=" col-3 mt-5">
+      <button type="button" class="btn btn-outline-info  " onclick=get_Minimax()> get Maximin </button>
+      <p class="avg form-control bg-transparent text-white  mt-3  " id="minmax" ></p> 
+    </div>
+    <div class="  col-3 mt-5 ">   
+      <button type="button" class="btn btn-outline-info " onclick= get_Average()>get Average</button>
+      <p class="avg form-control bg-transparent text-white  mt-3 " id="avg" ></p>  
+    </div>
+    <div class=" col-3 mt-5 ">
+      <button type="button" class="btn btn-outline-info " onclick=get_Criterion()> get Criterion </button>
+      <p class="avg form-control bg-transparent text-white  mt-3  " id="criterion" ></p> 
+    </div>
+  </div>
+</div>
+      <script src="Scripts/Desicion-theory.js"></script>
+</body>
+</html>

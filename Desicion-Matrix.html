@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Matrix</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css"> 
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="shortcut icon" href="img/5721988f-e218-42de-adb6-4c64656d4dfc.jpg" type="image/x-icon">
+</head>
+<body>
+  <div class="container-fluid">
+    <h1 class=" title text-center my-4 text-info shadow-lg p-3 mb-5  rounded">Decision Matrix Solver</h1>
+    </div>
+
+  <div class="container ">
+    <div class="row">
+    <div class="mt-5 col-6">
+      <table>
+     <tr>
+      <td> <p > Enter <small>No.</small> of Alternative </p> </td>
+      <td> <input class="form-control bg-transparent text-white" id="row" type="number" placeholder="Enter No. of Alternative      "></td>
+    </tr>
+    <tr>
+      <td> <p > Enter <small>No.</small> of Factor</p></td>
+      <td> <input class="form-control bg-transparent text-white" placeholder="Enter No. of Factor" id="column"  type="number"></td>
+    </tr>
+    <tr>
+      <td> <button type="button" class="btn btn-outline-info mt-3" onclick=writeNumber() >Create Table</button> </td>
+    </tr>
+
+  </table>
+    </div>
+     <div class="col-6 d-none mt-5 " id="Alt_factor">
+      <table >
+        <tr>
+          <td> <p> Enter the Alternative </p> </td>
+          <td> <input class="form-control bg-transparent text-white" placeholder="Enter the Alternative" id="add_Alternative" type="text"></td> 
+          <td> <button type="button" class="btn btn-outline-info text-center" onclick=add_Alternative()> ENTER</button>          </td>    
+        </tr>
+    
+        <tr>
+          <td> <p class="m-0"> Enter the factors </p>
+          </td>
+          <td><input class="form-control bg-transparent text-white" placeholder="Enter the Factors"  id="addFactor"  type="text"> </td>
+          <td><button type="button" class="btn btn-outline-info text-center" onclick=add_Factor()> ENTER</button></td>
+        </tr>
+
+        <tr>
+          <td> <p class="m-0"> Enter the Weight </p>
+          </td>
+          <td><input class="form-control bg-transparent text-white" placeholder="Enter the Weights"  id="addWeight"  type="text"> </td>
+          <td><button type="button" class="btn btn-outline-info text-center" onclick=add_Weight()> ENTER</button></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div class="group mt-4">
+    
+    <table  class="table mt-5 table-bordered table-striped table-hover" id="table">
+      
+    </table>
+    
+  </div>
+</div>
+
+  <div class="d-flex justify-content-center m-3 p-5">
+  <button type="button" class="btn btn-outline-info text-center m-3" onclick=multiply()> Calculate</button>
+   <label class="final_result mt-3 text-center mx-5 text-white rounded" id="final_result"> </label>
+  </div>
+
+
+      <script src="Scripts/Desicion-Matrix.js"></script>
+</body>
+</html>
